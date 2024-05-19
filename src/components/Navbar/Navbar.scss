@@ -1,0 +1,10 @@
+@import '../../sass/common.scss';
+
+.navbar {
+
+  .appbar {
+    background-color: $primary-color !important;
+    box-shadow: none !important;
+    z-index: 0;
+  }
+}

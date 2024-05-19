@@ -1,0 +1,22 @@
+@import './sass/common.scss';
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body, #root, .App {
+  overflow-x: hidden;
+}
+
+.App {
+  background-color: $primary-color;
+  width: 100vw;
+  min-height: 100vh;
+
+  .container {
+    background-color: #fff;
+    width: 100vw;
+    min-height: 100vh;
+  }
+}
