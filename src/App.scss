@@ -1,22 +1,27 @@
 @import './sass/common.scss';
 
+* {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
 p {
   margin: 0;
   padding: 0;
 }
 
 body, #root, .App {
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
 }
 
 .App {
   background-color: $primary-color;
-  width: 100vw;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 
   .container {
-    background-color: #fff;
-    width: 100vw;
-    min-height: 100vh;
+    flex: 1;
   }
 }

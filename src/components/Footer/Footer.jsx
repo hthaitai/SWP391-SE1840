@@ -4,7 +4,6 @@ export default function Footer() {
     <div className="footer">
       <p>Copyright &copy; 2024 @ Sparkle 'n Shine</p>
       <p>All rights reserved</p>
-
     </div>
   )
 }
