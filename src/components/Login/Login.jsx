@@ -10,7 +10,7 @@ export default function Login() {
           required
           className='login-input'
           id="outlined-required"
-          label="Email or username"
+          label="Email"
           defaultValue=""
         />
         <TextField
