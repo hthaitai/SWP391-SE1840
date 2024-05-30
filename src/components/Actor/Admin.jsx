@@ -15,6 +15,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import './Admin.scss';
+import { Link } from 'react-router-dom';
 
 export default function TemporaryDrawer() {
   const [open, setOpen] = React.useState(false);
@@ -23,12 +24,13 @@ export default function TemporaryDrawer() {
     setOpen(newOpen);
   };
   const items = [
-    { text: 'Add Manager', icon: <AddIcon /> },
-    { text: 'Update Manager Info', icon: <EditIcon /> },
-    { text: 'Change Manager Status', icon: <MailIcon /> },
-    { text: 'View Dashboard', icon: <BarChartIcon /> },
-    { text: 'View Manager List', icon: <VisibilityIcon /> },
-    { text: 'View Manager Info', icon: <VisibilityIcon /> }
+    { text: 'Add Manager', icon: <AddIcon />, path: '/add-manager' },
+    { text: 'Update Manager Info', icon: <EditIcon />, path: '/update-manager' },
+    { text: 'Change Manager Status', icon: <MailIcon />, path: '/change-manager-status' },
+    { text: 'View Dashboard', icon: <BarChartIcon />, path:'/view-dashboard' },
+    { text: 'View Manager List', icon: <VisibilityIcon/>, path: '/view-manager-list'},
+    { text: 'View Manager Info', icon: <VisibilityIcon />,path:'/view-manager-info' },
+    { text: 'Manage Manager', icon: <VisibilityIcon />,path:'/manage-manager' }
   ];
 
 
@@ -38,7 +40,7 @@ export default function TemporaryDrawer() {
       <List>
   {items.map((item) => (
     <ListItem key={item.text} disablePadding>
-      <ListItemButton>
+            <ListItemButton component={Link} to={item.path || '#'}>
         <ListItemIcon>
           {item.icon}
         </ListItemIcon>
@@ -49,9 +51,6 @@ export default function TemporaryDrawer() {
 </List>
 
       <Divider />
-       <Button> 
-        <h3>home</h3>
-        </Button>
     </Box>
   );
 
